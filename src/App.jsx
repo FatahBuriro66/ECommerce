@@ -2,21 +2,24 @@ import "./App.css";
 import Footer from "./Components/Footer/Footer";
 import Navbar from "./Components/Navbars/Navbar";
 import Cards from "./Components/Cards/Cards";
+import { faker } from "@faker-js/faker";
 
 function App() {
+  let randomImage = faker.image.urlLoremFlickr({ category: "animal" });
+  let randomName = faker.animal.bear();
   return (
     <>
       <Navbar />
       <Cards
-        title="What is Lorem Ipsum?"
-        images="../images/batman.png"
+        title={randomName}
+        images={randomImage}
         old_price="9,999"
         newPrice="9999"
         dollar="$"
         alt="batman"
         exp_date="10-08-2022"
       />
-      <h1>Abdul Fatah</h1>
+      <h1>Abdul fatah</h1>
       <Footer />
     </>
   );
