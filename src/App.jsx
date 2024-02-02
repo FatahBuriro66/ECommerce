@@ -5,8 +5,8 @@ import Cards from "./Components/Cards/Cards";
 import { faker } from "@faker-js/faker";
 
 function App() {
-  let randomImage = faker.image.urlLoremFlickr({ category: "animal" });
-  let randomName = faker.animal.bear();
+  let randomImage = faker.image.urlLoremFlickr({ category: "bird" });
+  let randomName = faker.animal.bird();
   return (
     <>
       <Navbar />
