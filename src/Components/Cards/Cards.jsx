@@ -1,31 +1,18 @@
 import React from "react";
 import "./Cards.scss";
 
-const Cards = (props) => {
+const Cards = ({ imageSrc, altText, title, description }) => {
   return (
-    <>
-      <div className="col-md-3">
-        <div className="card">
-          <img src={props.images} className="card-img-top" alt={props.alt} />
-          <div className="card-body">
-            <h5 className="card-title">{props.title}</h5>
-            <p>
-              <span className="old-price">
-                {props.dollar}
-                {props.oldPrice}
-              </span>
-              <span className="new-price">
-                {props.dollar}
-                {props.newPrice}
-              </span>
-            </p>
-            <p className="card-text">
-              <small className="text-muted">Ecpires On {props.exp_Date}</small>
-            </p>
-          </div>
-        </div>
+    <div className="card-two">
+      <img src={imageSrc} alt={altText} className="card-two__image" />
+      <div className="card-two__content">
+        <h1 className="card-two__title">{title}</h1>
+        <p className="card-two__description">{description}</p>
+        <button type="button" className="card-two__button">
+          Read
+        </button>
       </div>
-    </>
+    </div>
   );
 };
 
