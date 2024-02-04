@@ -4,7 +4,6 @@
 //               <Link to="/services">Services</Link>
 //               <Link to="/work">Work</Link>
 //               <Link to="/contactUs">Contact Us</Link>
-//               <Link to="/SignIn">Sign In</Link>
 //               <Link to="/SignUp">Sign Up</Link> */
 
 import React from "react";
@@ -12,7 +11,7 @@ import { Link } from "react-router-dom";
 import "./Navbar.scss";
 import { Button, Flex } from "antd";
 import { Typewriter } from "react-simple-typewriter";
-import Register from "../../Pages/Resgistration/Register/Register";
+// import Register from "../../Pages/Resgistration/Register/Register";
 
 const Navbar = () => {
   return (
@@ -36,6 +35,7 @@ const Navbar = () => {
             />{" "}
           </div>
           <div className="flex items-center ">
+            {/* //               <Link to="/SignIn">Sign In</Link> */}
             <Link to="/register">
               <Button type="primary" ghost>
                 Sign In

@@ -16,7 +16,7 @@ const routerApp = (
     <Route path="/services" element={<Services />} />
     <Route path="/work" element={<Work />} />
     <Route path="/login" element={<Login />} />
-    <Route path="/signin" element={<Register />} />
+    <Route path="/register" element={<Register />} />
   </Routes>
 );
 
