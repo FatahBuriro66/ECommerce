@@ -12,11 +12,11 @@ import "./index.css";
 const routerApp = (
   <Routes>
     <Route path="/" element={<App />} />
-    <Route path="/ContactUs" element={<ContactUs />} />
-    <Route path="/Services" element={<Services />} />
-    <Route path="/Work" element={<Work />} />
-    <Route path="/SignIn" element={<Login />} />
-    <Route path="/SignUp" element={<Register />} />
+    <Route path="/contactus" element={<ContactUs />} />
+    <Route path="/services" element={<Services />} />
+    <Route path="/work" element={<Work />} />
+    <Route path="/login" element={<Login />} />
+    <Route path="/signin" element={<Register />} />
   </Routes>
 );
 
