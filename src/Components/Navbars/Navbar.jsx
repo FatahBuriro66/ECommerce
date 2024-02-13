@@ -1,21 +1,21 @@
-// /* <h1>Abdul Fatah</h1> */
-// /* <div className="links">
-//               <Link to="/">Home</Link>
-//               <Link to="/services">Services</Link>
-//               <Link to="/work">Work</Link>
-//               <Link to="/contactUs">Contact Us</Link>
-//               <Link to="/SignUp">Sign Up</Link> */
-
-// import { Slider } from "antd";
-import Slider from "./Slider";
 import React from "react";
+import { Link } from "react-router-dom";
+import "./Navbar.scss";
 
-function Navbar() {
+const Navbar = () => {
   return (
     <>
-      <Slider></Slider>
+      <nav className="navbar">
+        <h1>Abdul Fatah</h1>
+        <div className="links">
+          <Link to="/">Home</Link>
+          <Link to="/services">Services</Link>
+          <Link to="/work">Work</Link>
+          <Link to="/contactUs">Contact Us</Link>
+        </div>
+      </nav>
     </>
   );
-}
+};
 
 export default Navbar;
