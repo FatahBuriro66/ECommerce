@@ -8,6 +8,7 @@ import Login from "./Pages/Resgistration/Login/Login.jsx";
 import Register from "./Pages/Resgistration/Register/Register.jsx";
 import App from "./App.jsx";
 import "./index.css";
+import AdminDashBoard from "./Admin/AdminDashBoard.jsx";
 
 const routerApp = (
   <Routes>
@@ -17,6 +18,7 @@ const routerApp = (
     <Route path="/Work" element={<Work />} />
     <Route path="/SignIn" element={<Login />} />
     <Route path="/SignUp" element={<Register />} />
+    <Route path="/AdminDashBoard" element={<AdminDashBoard />} />
   </Routes>
 );
 

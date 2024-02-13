@@ -1,14 +1,12 @@
 import React from "react";
-import Cards from "../Cards/Cards";
-
-const CardsComponent = ({ products, addItem, removeItem, addedItems }) => {
-     
+import Card from "./Card";
+import "./CardBody.css";
+const CardBody = ({ products, addItem, removeItem, addedItems }) => {
   products.map((product) => (product.isAdded = true));
-
   return (
     <div className="card__body">
       {products.map((product) => (
-        <Cards
+        <Card
           key={product.id}
           product={product}
           addItem={addItem}
@@ -20,4 +18,4 @@ const CardsComponent = ({ products, addItem, removeItem, addedItems }) => {
   );
 };
 
-export default CardsComponent;
+export default CardBody;

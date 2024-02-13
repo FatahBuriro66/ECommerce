@@ -1,18 +1,36 @@
 import React from "react";
-import "./Cards.scss";
+import "./Cards.scss"
 
-const Cards = ({ imageSrc, altText, title, description }) => {
+const Cards = () => {
+  const [isAdded, setIsAdded] = useState(true);
+  const item = addedItems.filter((addedItem) => addedItem.id == product.id);
+  useEffect(() => {
+    item.length == 0 ? setIsAdded(true) : setIsAdded(false);
+  }, [item]);
+
   return (
-    <div className="card-two">
-      <img src={imageSrc} alt={altText} className="card-two__image" />
-      <div className="card-two__content">
-        <h1 className="card-two__title">{title}</h1>
-        <p className="card-two__description">{description}</p>
-        <button type="button" className="card-two__button">
-          Read
-        </button>
+    <>
+      <div className="card">
+        <img className="card__img" src={product.image} alt="" />
+        <div>
+          <h2>{product.category}</h2>
+          <h4>{product.title}</h4>
+          <p>{product.description}</p>
+        </div>
+        <div className="card-price-add">
+          <span>Price : ${product.price}</span>
+          <button
+            className={isAdded ? "add-item-btn" : "remove-item-btn"}
+            onClick={() => {
+              isAdded ? addItem(product) : removeItem(product);
+              setIsAdded(!isAdded);
+            }}
+          >
+            {isAdded ? "ADD " : "CANCLE"}
+          </button>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

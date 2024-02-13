@@ -1,16 +1,14 @@
-import "./App.css";
-import CardsComponent from "./Components/CardsComponent/CardsComponent";
-import Footer from "./Components/Footer/Footer";
-import Navbar from "./Components/Navbars/Navbar";
+import React from "react";
+import Home from "./Pages/Home/Home";
+// import Navbar from "./Components/Navbars/Navbar";
 
-function App() {
+const App = () => {
   return (
     <>
-      <Navbar />
-      <CardsComponent />
-      <Footer />
+      {/* <Navbar /> */}
+      <Home />
     </>
   );
-}
+};
 
 export default App;
