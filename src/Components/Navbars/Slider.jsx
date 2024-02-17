@@ -1,9 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "../Navbars/Navbar.scss";
-import { Button } from "antd";
+// import { initializeApp } from "firebase-admin/app";
 import { Typewriter } from "react-simple-typewriter";
-// import Register from "../../Pages/Resgistration/Register/Register";
 
 const Slider = () => {
   return (
