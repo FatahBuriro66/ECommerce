@@ -1,11 +1,7 @@
 import { initializeApp } from "firebase/app";
-// import { getAuth } from "firebase/auth";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { getDatabase } from 'firebase/database'
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
     apiKey: "AIzaSyCHxiqio94he7QuMchkcQbdRj3WA6f_RKE",
     authDomain: "react-ecommerce-projec.firebaseapp.com",
@@ -17,9 +13,7 @@ const firebaseConfig = {
     measurementId: "G-C7E61DKT87"
 };
 
+
 const app = initializeApp(firebaseConfig);
-// const auth = getAuth(app);
-
-export { app };
-
-
+export const db = getDatabase(app)
+export const auth = getAuth(app)

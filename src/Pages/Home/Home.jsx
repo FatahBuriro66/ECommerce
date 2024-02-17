@@ -4,9 +4,8 @@ import Search from "../../Components/Search/Search";
 import AddProducts from "../../Components/addproducts/AddProducts";
 import CardBody from "../../Components/Cards/CardBody";
 import Button from "../../Components/button/Button";
-import Footer from "../../Components/Footer/Footer";
+
 import "./Home.css";
-import Slider from "../../Components/Navbars/Slider";
 
 function Home() {
   const [items, setItem] = useState([]);
@@ -43,7 +42,6 @@ function Home() {
 
   return (
     <>
-      <Slider />
       <div className="body__container">
         <div className="nav">
           <Header />
@@ -72,8 +70,6 @@ function Home() {
           addedItems={addedItems}
         />
       </div>
-
-      <Footer />
     </>
   );
 }

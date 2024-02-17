@@ -33,7 +33,7 @@ const Slider = () => {
                   isActive ? "border-b-2 border-cyan-500" : ""
                 }`
               }
-              to="/Services"
+              to="/"
             >
               Home
             </NavLink>
@@ -44,7 +44,7 @@ const Slider = () => {
                   isActive ? "border-b-2 border-cyan-500" : ""
                 }`
               }
-              to="/Work"
+              to="work"
             >
               Work
             </NavLink>
@@ -55,7 +55,7 @@ const Slider = () => {
                   isActive ? "border-b-2 border-cyan-500" : ""
                 }`
               }
-              to="/Services"
+              to="service"
             >
               Services
             </NavLink>
@@ -66,7 +66,7 @@ const Slider = () => {
                   isActive ? "border-b-2 border-cyan-500" : ""
                 }`
               }
-              to="/Services"
+              to="/"
             >
               Products
             </NavLink>
@@ -77,7 +77,7 @@ const Slider = () => {
                   isActive ? "border-b-2 border-cyan-500" : ""
                 }`
               }
-              to="/AdminDashBoard"
+              to="dashboard"
             >
               DashBoard
             </NavLink>
