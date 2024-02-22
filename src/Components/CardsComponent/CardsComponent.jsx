@@ -2,7 +2,6 @@ import React from "react";
 import Cards from "../Cards/Cards";
 
 const CardsComponent = ({ products, addItem, removeItem, addedItems }) => {
-     
   products.map((product) => (product.isAdded = true));
 
   return (

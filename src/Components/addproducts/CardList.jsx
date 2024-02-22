@@ -29,8 +29,12 @@ const CardList = ({ item, removeItem, setAddedItem, itemsArr }) => {
   }, [state]);
 
   return (
-    <div className="card-list-body">
-      <img src={item.image} className="card-list-img" alt="" />
+    <div className="card-list-body ">
+      <img
+        src={item.image}
+        className="card-list-img w-7 rounded-lg"
+        alt="error"
+      />
       <button
         className="delete-btn"
         onClick={() => {

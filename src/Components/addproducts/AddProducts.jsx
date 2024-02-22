@@ -1,7 +1,7 @@
 import React from "react";
 import CardList from "./CardList";
 import "./AddProducts.css";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 const AddProducts = ({ items, click, removeItem, setAddedItem }) => {
   const total = items
     .reduce((pre, cur) => {
@@ -11,6 +11,27 @@ const AddProducts = ({ items, click, removeItem, setAddedItem }) => {
   // let curDate = new Date();
   // console.log(curDate);
   const showDivRef = useRef(null);
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  function handleClickOutside(event) {
+    if (
+      showDivRef.current.contains(event.target) &&
+      !event.target.closest(".right-side")
+    ) {
+      showDivRef.current.classList.add("animate");
+
+      setTimeout(() => {
+        click(false);
+      }, 300);
+    }
+  }
 
   return (
     <div ref={showDivRef} className="addproducts__container">
@@ -32,8 +53,8 @@ const AddProducts = ({ items, click, removeItem, setAddedItem }) => {
                 {items.map((item, i) => (
                   <tr key={item.id}>
                     <td>{i + 1}</td>
-                    <td>{item.title}</td>
-                    <td>${item.price}</td>
+                    {/* <td>{item.title}</td> */}
+                    {/* <td>${item.price}</td> */}
                     <td>{item.addNumber}</td>
                   </tr>
                 ))}
@@ -52,6 +73,7 @@ const AddProducts = ({ items, click, removeItem, setAddedItem }) => {
           </div>
         </div>
       </div>
+
       <div className="right-side">
         <div className="right-side-header">
           <h1>
