@@ -7,7 +7,7 @@ import { Typewriter } from "react-simple-typewriter";
 const Slider = () => {
   return (
     <>
-      <nav className="navbar w-full shadow sticky  top-0 p-2 flex bg-cyan-600">
+      <nav className="navbar w-full shadow sticky z-10 top-0 p-2 flex bg-cyan-600">
         <div className="flex justify-between  w-full ">
           <div className="w-64">
             <Typewriter

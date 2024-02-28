@@ -25,16 +25,16 @@ const AddProducts = ({ items, click, removeItem, setAddedItem }) => {
       showDivRef.current.contains(event.target) &&
       !event.target.closest(".right-side")
     ) {
-      showDivRef.current.classList.add("animate");
+      // showDivRef.current.classList.add("animate");
 
       setTimeout(() => {
         click(false);
-      }, 300);
+      }, 200);
     }
   }
 
   return (
-    <div ref={showDivRef} className="addproducts__container">
+    <div ref={showDivRef} className="addproducts__container ">
       <div className="left-side">
         <div className="check-out-container">
           <div className="check-out-print">
@@ -74,7 +74,7 @@ const AddProducts = ({ items, click, removeItem, setAddedItem }) => {
         </div>
       </div>
 
-      <div className="right-side">
+      <div className="right-side ">
         <div className="right-side-header">
           <h1>
             Shopping <span className="total-items">{items.length}</span>
