@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import {
   Route,
   RouterProvider,
@@ -17,24 +17,6 @@ import App from "./App.jsx";
 import "./index.css";
 import AdminDashBoard from "./Admin/AdminDashBoard.jsx";
 import Home from "./Pages/Home/Home.jsx";
-
-// const routerApp = (
-//   <Routes>
-//     <Route path="/" element={<Layout />} />
-//     <Route path=" " element={<Home />} />
-//     <Route path="/Services" element={<Services />} />
-//     <Route path="/Work" element={<Work />} />
-//     <Route path="/SignIn" element={<Login />} />
-//     <Route path="/SignUp" element={<Register />} />
-//     <Route path="/AdminDashBoard" element={<AdminDashBoard />} />
-//   </Routes>
-// );
-
-// ReactDOM.createRoot(document.getElementById("root")).render(
-//   <React.StrictMode>
-//     <Router>{routerApp}</Router>
-//   </React.StrictMode>
-// );
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -63,6 +45,6 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} /> {/* it require a prop */}
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
